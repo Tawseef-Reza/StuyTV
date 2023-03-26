@@ -1,0 +1,96 @@
+@font-face {
+    font-family: bitter;
+    src: url(Bitter-VariableFont_wght.ttf);
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+  }
+  
+  .front {
+    background-color: lightgray;
+  }
+  
+  .back {
+    background-color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .back {
+    transform: rotateY(0);
+  }
+  
+  .back {
+    background-color: white;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .back img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  
+  .match {
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin-top:20vh;
+    font-size: 36px;
+    font-family: bitter;
+  }
+  
+  .mismatch {
+    border: 1px solid red;
+  }
+  
+  .miss-container {
+    margin-top:20vh;
+    margin-bottom:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    font-size: 36px;
+    font-family: bitter;
+
+  }
+  
